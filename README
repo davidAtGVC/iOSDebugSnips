@@ -1,0 +1,17 @@
+A collection of useful (to me) code snips I use for debugging iOS
+
+** retain_release_debug.h
+
+This was taken from a debug post http://rentzsch.tumblr.com/post/3895140826/retain-release-debugging
+
+Notes: I converted it to a macro, so including it is as simple as
+
+@implementation MyClass
+- init {É}
+
+GVC_RETAIN_RELEASE_DEBUG
+
+- otherMethods {É}
+@end
+
+When the DEBUG flag is set it will inject retain/release debug messages, but when not set it will add a simple comment.  You will not want to leave it in you code, but if you do at least your product build will not have tonnes of useless logging.

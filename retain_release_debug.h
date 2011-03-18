@@ -40,7 +40,7 @@
     } \
 } 
 
-#elif
+#else
 
 #define GVC_RETAIN_RELEASE_DEBUG	/* does nothing in production */
 
